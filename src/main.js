@@ -5,9 +5,10 @@ if (require('electron-squirrel-startup')) return app.quit();
 
 const { autoUpdater } = require("electron-updater");
 
-require(path.resolve(__dirname, "debug_console"))
 
 const path = require('path');
+
+require(path.resolve(__dirname, "debug_console"))
 
 // Used to Debug Releases that won't have a console... Comment out when devloping
 
