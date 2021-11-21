@@ -1,6 +1,6 @@
 {
     "name": "receipt_app",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "description": "A Receipt App, made with Electron Js",
     "main": "src/main.js",
     "scripts": {
