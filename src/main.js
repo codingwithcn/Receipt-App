@@ -110,6 +110,10 @@ ipcMain.on("FilterData", (event, data) => {
     }, data.query)
 })
 
+ipcMain.on('app_version', (event) => {
+    event.sender.send('app_version', { version: app.getVersion() });
+});
+
 // This is for the render process do not touch
 ipcMain.on("closeWindow", () => {
     app.quit()

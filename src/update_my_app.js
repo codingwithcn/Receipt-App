@@ -10,7 +10,7 @@ render.on("app_version", function(event, data) {
     show_update_div.innerHTML = `
     <div style="width: 160px; background-color: blue; color: white; text-align: center;border-radius: 6px; padding: 8px 0; position: absolute; z-index: 1; bottom: 50%; left: 50%; margin-left: -80px;">
         <p>You are currently on Version: ${data.version}</p>    
-        <p>And a new update for Captalist is now availiable</p>
+        <p>And a new update for Reciept-App is now availiable</p>
         <button onClick="render.send('quitAndInstall')">Update Now!!!</button>
     </div>
     `
