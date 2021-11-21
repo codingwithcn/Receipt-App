@@ -61,9 +61,19 @@
         }
     },
     "devDependencies": {
-        "electron": "^16.0.0"
+        "@electron-forge/cli": "^6.0.0-beta.57",
+        "@electron-forge/maker-deb": "^6.0.0-beta.57",
+        "@electron-forge/maker-rpm": "^6.0.0-beta.57",
+        "@electron-forge/maker-squirrel": "^6.0.0-beta.57",
+        "@electron-forge/maker-zip": "^6.0.0-beta.57",
+        "@electron-forge/publisher-github": "^6.0.0-beta.61",
+        "electron": "^16.0.0",
+        "electron-builder": "22.10.5"
     },
     "dependencies": {
+        "electron-builder-squirrel-windows": "^22.14.2",
+        "electron-squirrel-startup": "^1.0.0",
+        "electron-updater": "^4.3.9",
         "sqlite3": "^5.0.2"
     },
     "build": {
