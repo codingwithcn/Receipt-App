@@ -1,0 +1,88 @@
+{
+    "name": "receipt_app",
+    "version": "1.0.0",
+    "description": "A Receipt App, made with Electron Js",
+    "main": "src/main.js",
+    "scripts": {
+        "start": "electron .",
+        "package": "npx electron-forge package",
+        "make": "electron-forge make",
+        "publish": "npx electron-forge publish",
+        "postinstall": "npx electron-builder install-app-deps",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder"
+    },
+    "repository": "https://github.com/codingwithcn/Receipt-App",
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "Chidozie Nnaji",
+    "license": "CC0-1.0",
+    "config": {
+        "forge": {
+            "packagerConfig": {},
+            "makers": [{
+                    "name": "@electron-forge/maker-squirrel",
+                    "config": {
+                        "name": "Receipt-App"
+                    }
+                },
+                {
+                    "name": "@electron-forge/maker-zip",
+                    "platforms": [
+                        "darwin"
+                    ]
+                },
+                {
+                    "name": "@electron-forge/maker-deb",
+                    "config": {}
+                },
+                {
+                    "name": "@electron-forge/maker-rpm",
+                    "config": {}
+                }
+            ],
+            "publishers": [{
+                "name": "@electron-forge/publisher-github",
+                "config": {
+                    "repository": {
+                        "owner": "codingwithcn",
+                        "name": "Receipt-App",
+                        "type": "git",
+                        "url": "https://github.com/codingwithcn/Receipt-App.git"
+                    }
+                },
+                "draft": true
+            }]
+        }
+    },
+    "devDependencies": {
+        "electron": "^16.0.0"
+    },
+    "dependencies": {
+        "sqlite3": "^5.0.2"
+    },
+    "build": {
+        "extraResources": [
+            "databaseFolder"
+        ],
+        "productName": "Receipt-App",
+        "copyright": "Copyright © 2021 ${author}",
+        "linux": {
+            "category": "Development",
+            "publish": false,
+            "target": "AppImage"
+        },
+        "mac": {
+            "icon": "src/icon.png",
+            "category": "public.app-category.developer-tools"
+        },
+        "win": {
+            "icon": "src/icon.png"
+        }
+    }
+}

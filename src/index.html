@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" >
+    <link href="styles.css" rel="stylesheet">
+    <title>Reciepts</title>
+  </head>
+  <body>
+    <div id="tools">
+      <div id="refresh_div">Refresh</div>
+      <div id="add_new_pay_div">Add New Payment</div>
+      <div id="save_changes_div">Save Changes</div>
+      <div id="print_records_div">Print Records</div>
+    </div>
+  
+    <div id="search">
+      <input id="search_name" placeholder="Filter by person who payed">
+      <input id="search_amount" placeholder="Filter by amount payed">
+      <input id="search_date" placeholder="Filter by date payed">
+    </div>
+    <div id="data_div">
+      <div class="data_row"></div>
+    </div>
+    <img src="loading.gif" id="loading-img">
+
+    <div id="add_new_payment_popup"></div>
+    <div id="form_container" class="form_container">
+      <div> 
+        <h3>Name of Person paying</h3>
+        <input id="create_person_name">
+      </div>
+  
+      <div> 
+        <h3>Amount Person is paying</h3>
+        <input id="create_person_amount">
+      </div>
+      <button id="create_reciept_but">Create Reciept</button>
+    </div>
+
+    <menu id="ctxMenu">
+      <menu title="Delete" id="ctxMenuDelete"></menu>
+    </menu>
+  </body>
+  <script src='render.js'></script>
+  <script src="controller.js"></script>
+  <script src="script.js"></script>
+  <script src="update_my_app.js"></script>
+</html>
