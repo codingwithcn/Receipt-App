@@ -1,45 +1,36 @@
-# electron-quick-start
+# Receipt-App
 
-**Clone and run for a quick way to see Electron in action.**
+**This is a simple, easy to use receipt app, that helps you keep your books together.**
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start) within the Electron documentation.
+# Visual
+<img src="https://user-images.githubusercontent.com/67172682/142747325-bce0a4b7-35a0-4016-bdb2-bb57114705b2.png" height="620px" width="100%" alt="View of app screen">
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+# Key Feutures
+### Receipt-App lets you:
+> - Add a new receipt
+> - Delete a old receipt
+> - Change a receipt value (The person that payed you, The amount they payed, They date they payed). **_When changing a receipt value, do not forget to save the change, or else the new entry would not be saved._**
+> - Print Currently viewed Receipt records. **_(Currently viewed being it will print the receipts that you are currently able to see)_**
+> - Filter through your saved receipts to find the receipt you are currently looking for.
 
-A basic Electron application needs just these files:
+# How to create a receipt
+<img src="https://user-images.githubusercontent.com/67172682/142747674-86bda165-dfd2-4963-aa77-7827d7cf2f2f.png" width="100%" alt="Create a Receipt view">
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+> - First click on the Add New Payment button
+> - Once you are able to see the popup, fill it out
+> - Once done hit Create Receipt button
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/latest/tutorial/quick-start).
+**_Note if you decided you no longer want to create a receipt, all you have to is click anywhere else but the popup_**
 
-## To Use
+# How to delete a receipt
+> It is as simple as right click on a receipt. They a popup will show. Click on the delete button of the popup.
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+# Developer Note
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
-```
+Since Receipt-App was made using electron, debug an error has become way easier, so if an issue ever occurs all you have to do is right click on "Menu +", which creates a new popup, on that popup right click on "View +", then finally left click on "Toggle Developers Tools" and when a new window shows up, head over to the console, to see what exactly cause the issue.
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+Because it is so easy to see an issue, it becomes easier to report it, so when ever you spot an issue, send me an email and I will see try to fix it when ever I have an oppurtunity.
 
-## Resources for Learning Electron
-
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
 
 ## License
-
 [CC0 1.0 (Public Domain)](LICENSE.md)
