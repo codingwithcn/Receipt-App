@@ -1,9 +1,24 @@
 // Modules to control application life and create native browser window
 const { app, ipcMain, Tray, BrowserWindow } = require('electron');
 
+if (require('electron-squirrel-startup')) return app.quit();
+
 const { autoUpdater } = require("electron-updater");
 
+require(path.resolve(__dirname, "debug_console"))
+
 const path = require('path');
+
+// Used to Debug Releases that won't have a console... Comment out when devloping
+
+const fs = require("fs");
+try {
+    fs.unlinkSync(path.resolve(process.resourcesPath, "console.log"))
+        //We will need to delete the previous log, so we will only deal with recent errors
+} catch (err) {
+    console.error(err)
+}
+console.file(path.resolve(process.resourcesPath, "console.log"));
 
 const { Receipt, image } = require(path.join(__dirname, 'receipt'));
 const db_func = require(path.join(__dirname, 'db'));
