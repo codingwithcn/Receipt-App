@@ -30,8 +30,8 @@ class Controller {
       let amount =  document.getElementById("create_person_amount").value;
 
       if (name.length > 0 && amount.length > 0){
-        this.loading_img.style.display = "block";
-        this.data_div.style.display = "none"
+        document.getElementById("loading-img").style.display = "block";
+        document.getElementById("data_div").style.display = "none"
         render.send("NewReceipt", {name: name, amount: amount})
       }
       document.getElementById("add_new_payment_popup").click();
@@ -144,8 +144,8 @@ class Controller {
         ctxMenu.style.top = (event.pageY - 10)+"px";
 
         document.getElementById("ctxMenuDelete").onclick = function(){
-          this.loading_img.style.display = "block";
-          this.data_div.style.display = "none"
+          document.getElementById("loading-img").style.display = "block";
+          document.getElementById("data_div").style.display = "none"
           render.send("DeleteRow", {row: item.id})
           ctxMenu.style.display = "";
           ctxMenu.style.left = "";
