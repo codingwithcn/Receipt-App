@@ -8,11 +8,11 @@ let currentDate = {
         return (n < 10 ? '0' : '') + n;
     },
 
-    get_date: function(){
+    get_date: function() {
         var date = new Date();
-        var month = this.pad2(date.getMonth()+1);
-        var day =  this.pad2(date.getDate())
-        var year =  date.getFullYear();
+        var month = this.pad2(date.getMonth() + 1);
+        var day = this.pad2(date.getDate())
+        var year = date.getFullYear();
         return month + "/" + day + "/" + year;
     }
 }
@@ -40,13 +40,13 @@ const table_exist = () => {
  * Checks if database exist, if it does not it creates it
  * Then it checks if table exist, if it does notit creates it
  */
-const does_db_exit_if_not_create = () =>{
+const does_db_exit_if_not_create = () => {
     // open the database 
     console.log(db_file_loc)
-    if (fs.existsSync(db_file_loc)){
+    if (fs.existsSync(db_file_loc)) {
         table_exist()
-    }else {
-        fs.open(db_file_loc, 'w', function (err, 
+    } else {
+        fs.open(db_file_loc, 'w', function(err,
             file) {
             if (err) throw err;
             console.log('Saved!');
@@ -62,10 +62,10 @@ const does_db_exit_if_not_create = () =>{
  * @param {string} amount of money person payed you want stored in db
  * @param {Function} callback calls after the function is done running
  */
-const new_reciept = (name, amount, callback) => {
+const new_reciept = (name, amount, callback = function() {}) => {
     let db = new sqlite3.Database(db_file_loc, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
-    db.run(`insert into Receipt (name, amount, date) values (?,?,?)`, [name, amount, currentDate.get_date()], (err)=>{
-        if (err){
+    db.run(`insert into Receipt (name, amount, date) values (?,?,?)`, [name, amount, currentDate.get_date()], (err) => {
+        if (err) {
             console.log("WE ARE IN CREATE Receipt")
             console.log(err.message);
         }
@@ -74,12 +74,12 @@ const new_reciept = (name, amount, callback) => {
     callback();
 }
 
-const get_reciepts = (callback, query=null) => {
+const get_reciepts = (callback = function() {}, query = null) => {
     let db = new sqlite3.Database(db_file_loc, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
     let sql;
-    if (query != null){
+    if (query != null) {
         sql = query;
-    }else {
+    } else {
         sql = "select * from Receipt";
     }
     db.all(sql, [], (err, rows) => {
@@ -94,10 +94,10 @@ const get_reciepts = (callback, query=null) => {
 const updateReciepts = (column, value, id) => {
     let db = new sqlite3.Database(db_file_loc, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
 
-    let sql =  `update Receipt set ${column} =? where id=${id}`
+    let sql = `update Receipt set ${column} =? where id=${id}`
 
-    db.run(sql, [value], function(err){
-        console.log(err) 
+    db.run(sql, [value], function(err) {
+        console.log(err)
     });
     db.close()
 }
@@ -105,10 +105,10 @@ const updateReciepts = (column, value, id) => {
 const deleteReciepts = (id) => {
     let db = new sqlite3.Database(db_file_loc, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE);
 
-    let sql =  `delete from Receipt where id=${id}`
+    let sql = `delete from Receipt where id=${id}`
 
-    db.run(sql, [], function(err){
-        console.log(err) 
+    db.run(sql, [], function(err) {
+        console.log(err)
     });
     db.close()
 }
