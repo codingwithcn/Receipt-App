@@ -31,6 +31,10 @@ Since Receipt-App was made using electron, debug an error has become way easier,
 
 Because it is so easy to see an issue, it becomes easier to report it, so when ever you spot an issue, send me an email and I will see try to fix it when ever I have an oppurtunity.
 
+# Credit:
+> - App was made with Electron js
+> - App was made with Sqlite3
+> - Chidozie J. Nnaji (codingwithcn@gmail.com) was the Author of this app
 
 ## License
 [CC0 1.0 (Public Domain)](LICENSE.md)
