@@ -757,10 +757,10 @@ app-builder-lib@22.10.5:
     semver "^7.3.4"
     temp-file "^3.3.7"
 
-app-builder-lib@22.14.7:
-  version "22.14.7"
-  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-22.14.7.tgz#25335c03df49b4efa871a59869dea43f2c3e8f3e"
-  integrity sha512-AY682h4CLECLxdMM4QXLF9hZyO+639hxhtgUDKK1rGW2QBLl7uoYoKfcwm7ca3IeBqGmCrYkbTdVKESGQZsWXQ==
+app-builder-lib@22.14.9:
+  version "22.14.9"
+  resolved "https://registry.yarnpkg.com/app-builder-lib/-/app-builder-lib-22.14.9.tgz#d06c29ae9feff87b5ef353ee2589b4e05f7b7920"
+  integrity sha512-gSIadvqjANp6BcftNpSJVDYpbu9KGyFSzwHJktg2byL4NlwrSQJlU23rdUZfLCvMODRURAF4jWxqa348x8xNow==
   dependencies:
     "7zip-bin" "~5.1.1"
     "@develar/schema-utils" "~2.6.5"
@@ -1717,12 +1717,12 @@ ejs@^3.1.6:
   dependencies:
     jake "^10.6.1"
 
-electron-builder-squirrel-windows@^22.14.2:
-  version "22.14.7"
-  resolved "https://registry.yarnpkg.com/electron-builder-squirrel-windows/-/electron-builder-squirrel-windows-22.14.7.tgz#a99520c41baa16b2881613e4d4acadcd8df5c2b4"
-  integrity sha512-IqL66PAX14SJ8zdq7e/1VaDmKN9up+UqI3MT0Tud2NtpafhRbrpfcGtfMm5sYoj0QTJmT8Dwe/TcV8SY9A9C1A==
+electron-builder-squirrel-windows@^22.14.9:
+  version "22.14.9"
+  resolved "https://registry.yarnpkg.com/electron-builder-squirrel-windows/-/electron-builder-squirrel-windows-22.14.9.tgz#c7451b230df643b8c1d8a34f361ab4234788c321"
+  integrity sha512-wW6bstp0Xm8OhQcmfJSaDHgbza0/ukdkHMHImOvJZDLli2QPEEKwuVvhbaMZZtcZWc6zFp9Ah3g8ueHWJW53lg==
   dependencies:
-    app-builder-lib "22.14.7"
+    app-builder-lib "22.14.9"
     archiver "^5.3.0"
     builder-util "22.14.7"
     fs-extra "^10.0.0"
