@@ -42,6 +42,17 @@
     ora "^5.0.0"
     pretty-ms "^7.0.0"
 
+"@electron-forge/async-ora@6.0.0-beta.67":
+  version "6.0.0-beta.67"
+  resolved "https://registry.yarnpkg.com/@electron-forge/async-ora/-/async-ora-6.0.0-beta.67.tgz#c5740d19e4d836cb856ac4c0ca897acbdc11da83"
+  integrity sha512-pqQlxHRnECDAAQhi3U2JgSj60TBv3e3ZLvL9Wv+dIBVv64Oc2QTRrryO5Svd7w2J1t+enVwQue18IrVaYUjw0w==
+  dependencies:
+    chalk "^4.0.0"
+    debug "^4.3.1"
+    log-symbols "^4.0.0"
+    ora "^5.0.0"
+    pretty-ms "^7.0.0"
+
 "@electron-forge/cli@^6.0.0-beta.57":
   version "6.0.0-beta.61"
   resolved "https://registry.yarnpkg.com/@electron-forge/cli/-/cli-6.0.0-beta.61.tgz#8dbfb6af9cc8fa09687d4e5e249657c2a305273f"
@@ -237,15 +248,23 @@
   dependencies:
     "@electron-forge/shared-types" "6.0.0-beta.61"
 
-"@electron-forge/publisher-github@^6.0.0-beta.61":
-  version "6.0.0-beta.61"
-  resolved "https://registry.yarnpkg.com/@electron-forge/publisher-github/-/publisher-github-6.0.0-beta.61.tgz#d2bb192926bcc37185c37ac4d018c3519b0a46fb"
-  integrity sha512-8m4+Mz5eXNPNgvh736bCeCc+Mxj6CwNRTr5dgjveY0Fwhj0lMkg9P6bZRSuas1VrrZneIUjfTlPPvkMfgBbGmg==
+"@electron-forge/publisher-base@6.0.0-beta.67":
+  version "6.0.0-beta.67"
+  resolved "https://registry.yarnpkg.com/@electron-forge/publisher-base/-/publisher-base-6.0.0-beta.67.tgz#b8cf8af7ec4e2a6039c9f5e49a1f09bb832826ea"
+  integrity sha512-mLo4eCvU4cFG5qH+5NzQYIRfcojAQC7ogHSUB1Tv0HTQqZwozR+pEtuEydMk9OFBEPkphJjA59qY2N3kZrcuOA==
   dependencies:
-    "@electron-forge/async-ora" "6.0.0-beta.61"
-    "@electron-forge/publisher-base" "6.0.0-beta.61"
-    "@electron-forge/shared-types" "6.0.0-beta.61"
+    "@electron-forge/shared-types" "6.0.0-beta.67"
+
+"@electron-forge/publisher-github@^6.0.0-beta.67":
+  version "6.0.0-beta.67"
+  resolved "https://registry.yarnpkg.com/@electron-forge/publisher-github/-/publisher-github-6.0.0-beta.67.tgz#ff8367d073f4c88aa3f471e2ff17fbf4ed6ecccd"
+  integrity sha512-wZOsn2E8lDwRMdTAl+pl7e84Ft8C6AZG/yaz8r6jaLNN9ttWGaq3sDySGi+uNIXns1hxr0GncW1iem//ENP2mw==
+  dependencies:
+    "@electron-forge/async-ora" "6.0.0-beta.67"
+    "@electron-forge/publisher-base" "6.0.0-beta.67"
+    "@electron-forge/shared-types" "6.0.0-beta.67"
     "@octokit/core" "^3.2.4"
+    "@octokit/plugin-retry" "^3.0.9"
     "@octokit/rest" "^18.0.11"
     "@octokit/types" "^6.1.2"
     debug "^4.3.1"
@@ -269,6 +288,16 @@
   dependencies:
     "@electron-forge/async-ora" "6.0.0-beta.63"
     electron-packager "^15.4.0"
+    electron-rebuild "^3.2.6"
+    ora "^5.0.0"
+
+"@electron-forge/shared-types@6.0.0-beta.67":
+  version "6.0.0-beta.67"
+  resolved "https://registry.yarnpkg.com/@electron-forge/shared-types/-/shared-types-6.0.0-beta.67.tgz#1fd01ceff4c4868892382f1dc73e5c0ea19c29e6"
+  integrity sha512-QzL0yINK2d98trUbhrJPnIKhhhQSKOoiUBG0GM44dR0pstdOexNMNdgWX2+48PHiDwiqosgQBB9b47uJCrPR0Q==
+  dependencies:
+    "@electron-forge/async-ora" "6.0.0-beta.67"
+    electron-packager "^16.0.0"
     electron-rebuild "^3.2.6"
     ora "^5.0.0"
 
@@ -330,6 +359,22 @@
     global-agent "^3.0.0"
     global-tunnel-ng "^2.7.1"
 
+"@electron/get@^2.0.0":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@electron/get/-/get-2.0.1.tgz#d960dd4bdbeb44613af7c196231e376ef4c48a6f"
+  integrity sha512-8nmTGC/3/6IaEfeTcQwtJdjLA/L3sb0XQJUv9x3ZfM0pfmKvkSdelbT4pgF3dpCQOvSmJ97kYAvFltikVjfepA==
+  dependencies:
+    debug "^4.1.1"
+    env-paths "^2.2.0"
+    fs-extra "^8.1.0"
+    got "^11.8.5"
+    progress "^2.0.3"
+    semver "^6.2.0"
+    sumchecker "^3.0.1"
+  optionalDependencies:
+    global-agent "^3.0.0"
+    global-tunnel-ng "^2.7.1"
+
 "@electron/universal@1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@electron/universal/-/universal-1.0.4.tgz#231ac246c39d45b80e159bd21c3f9027dcaa10f5"
@@ -351,6 +396,19 @@
     debug "^4.3.1"
     dir-compare "^2.4.0"
     fs-extra "^9.0.1"
+
+"@electron/universal@^1.2.1":
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/@electron/universal/-/universal-1.3.1.tgz#44f910fb03239295357749b77d59ec3e8dfc4fd6"
+  integrity sha512-y1r1dpiyrOa3EOxKgr2Rwsv69Dya2MC1LwM+9/QG5jeCetd2s73NTrpubBD6scv9sRNexYYik8or/Fo8sNtNbg==
+  dependencies:
+    "@malept/cross-spawn-promise" "^1.1.0"
+    asar "^3.1.0"
+    debug "^4.3.1"
+    dir-compare "^2.4.0"
+    fs-extra "^9.0.1"
+    minimatch "^3.0.4"
+    plist "^3.0.4"
 
 "@gar/promisify@^1.0.1":
   version "1.1.2"
@@ -480,6 +538,14 @@
   dependencies:
     "@octokit/types" "^6.34.0"
     deprecation "^2.3.1"
+
+"@octokit/plugin-retry@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-retry/-/plugin-retry-3.0.9.tgz#ae625cca1e42b0253049102acd71c1d5134788fe"
+  integrity sha512-r+fArdP5+TG6l1Rv/C9hVoty6tldw6cE2pRHNGmFPdyfrc696R6JjrQ3d7HdVqGwuzfyrcaLAKD7K8TX8aehUQ==
+  dependencies:
+    "@octokit/types" "^6.0.3"
+    bottleneck "^2.15.3"
 
 "@octokit/request-error@^2.0.5", "@octokit/request-error@^2.1.0":
   version "2.1.0"
@@ -1015,6 +1081,11 @@ boolean@^3.0.1:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/boolean/-/boolean-3.1.4.tgz#f51a2fb5838a99e06f9b6ec1edb674de67026435"
   integrity sha512-3hx0kwU3uzG6ReQ3pnaFQPSktpBw6RHN3/ivDKEuU8g1XSfafowyvDnadjv1xp8IZqhtSukxlwv9bF6FhX8m0w==
+
+bottleneck@^2.15.3:
+  version "2.19.5"
+  resolved "https://registry.yarnpkg.com/bottleneck/-/bottleneck-2.19.5.tgz#5df0b90f59fd47656ebe63c78a98419205cadd91"
+  integrity sha512-VHiNCbI1lKdl44tGrhNfU3lup0Tj/ZBMJB5/2ZbNXRCPuRCO7ed2mgcK4r17y+KB2EfuYuRaVlwNbAeaWGSpbw==
 
 boxen@^5.0.0:
   version "5.1.2"
@@ -1867,6 +1938,31 @@ electron-packager@^15.4.0:
     semver "^7.1.3"
     yargs-parser "^20.0.0"
 
+electron-packager@^16.0.0:
+  version "16.0.0"
+  resolved "https://registry.yarnpkg.com/electron-packager/-/electron-packager-16.0.0.tgz#2eb7f14114e06b545207496ef66b10c24b7c8ba1"
+  integrity sha512-7Ey4UUaHg3FYhA7ktsAvCWP8srp9+iPljGdeJBsNaZBakU6HWhvRC+Pc7LWXGCgAVIN5BQsUwR3xrCbFno91VA==
+  dependencies:
+    "@electron/get" "^2.0.0"
+    "@electron/universal" "^1.2.1"
+    asar "^3.1.0"
+    cross-spawn-windows-exe "^1.2.0"
+    debug "^4.0.1"
+    electron-notarize "^1.1.1"
+    electron-osx-sign "^0.5.0"
+    extract-zip "^2.0.0"
+    filenamify "^4.1.0"
+    fs-extra "^10.1.0"
+    galactus "^0.2.1"
+    get-package-info "^1.0.0"
+    junk "^3.1.0"
+    parse-author "^2.0.0"
+    plist "^3.0.0"
+    rcedit "^3.0.1"
+    resolve "^1.1.6"
+    semver "^7.1.3"
+    yargs-parser "^21.1.1"
+
 electron-publish@22.10.5:
   version "22.10.5"
   resolved "https://registry.yarnpkg.com/electron-publish/-/electron-publish-22.10.5.tgz#9cbe46266b6c79d8c6e99840755682e2262d3543"
@@ -2253,10 +2349,10 @@ fs-constants@^1.0.0:
   resolved "https://registry.yarnpkg.com/fs-constants/-/fs-constants-1.0.0.tgz#6be0de9be998ce16af8afc24497b9ee9b7ccd9ad"
   integrity sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==
 
-fs-extra@^10.0.0:
-  version "10.0.0"
-  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.0.tgz#9ff61b655dde53fb34a82df84bb214ce802e17c1"
-  integrity sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==
+fs-extra@^10.0.0, fs-extra@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.1.0.tgz#02873cfbc4084dde127eaa5f9905eef2325d1abf"
+  integrity sha512-oRXApq54ETRj4eMiFzGnHWGy+zo5raudjuxN0b8H7s/RU2oW0Wvsx9O0ACRN/kRq9E8Vu/ReskGB5o3ji+FzHQ==
   dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
@@ -2496,6 +2592,23 @@ got@^11.7.0:
   version "11.8.3"
   resolved "https://registry.yarnpkg.com/got/-/got-11.8.3.tgz#f496c8fdda5d729a90b4905d2b07dbd148170770"
   integrity sha512-7gtQ5KiPh1RtGS9/Jbv1ofDpBFuq42gyfEib+ejaRBJuj/3tQFeR5+gw57e4ipaU8c/rCjvX6fkQz2lyDlGAOg==
+  dependencies:
+    "@sindresorhus/is" "^4.0.0"
+    "@szmarczak/http-timer" "^4.0.5"
+    "@types/cacheable-request" "^6.0.1"
+    "@types/responselike" "^1.0.0"
+    cacheable-lookup "^5.0.3"
+    cacheable-request "^7.0.2"
+    decompress-response "^6.0.0"
+    http2-wrapper "^1.0.0-beta.5.2"
+    lowercase-keys "^2.0.0"
+    p-cancelable "^2.0.0"
+    responselike "^2.0.0"
+
+got@^11.8.5:
+  version "11.8.5"
+  resolved "https://registry.yarnpkg.com/got/-/got-11.8.5.tgz#ce77d045136de56e8f024bebb82ea349bc730046"
+  integrity sha512-o0Je4NvQObAuZPHLFoRSkdG2lTgtcynqymzg2Vupdx6PorhaT5MCbIyXG6d4D94kk8ZG57QeosgdiqfJWhEhlQ==
   dependencies:
     "@sindresorhus/is" "^4.0.0"
     "@szmarczak/http-timer" "^4.0.5"
@@ -3983,6 +4096,14 @@ plist@^3.0.0, plist@^3.0.1:
     base64-js "^1.5.1"
     xmlbuilder "^9.0.7"
 
+plist@^3.0.4:
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/plist/-/plist-3.0.6.tgz#7cfb68a856a7834bca6dbfe3218eb9c7740145d3"
+  integrity sha512-WiIVYyrp8TD4w8yCvyeIr+lkmrGRd5u0VbRnU+tP/aRLxP/YadJUYOMZJ/6hIa3oUyVCsycXvtNRgd5XBJIbiA==
+  dependencies:
+    base64-js "^1.5.1"
+    xmlbuilder "^15.1.1"
+
 prepend-http@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-2.0.0.tgz#e92434bfa5ea8c19f41cdfd401d741a3c819d897"
@@ -5163,7 +5284,7 @@ xdg-basedir@^4.0.0:
   resolved "https://registry.yarnpkg.com/xdg-basedir/-/xdg-basedir-4.0.0.tgz#4bc8d9984403696225ef83a1573cbbcb4e79db13"
   integrity sha512-PSNhEJDejZYV7h50BohL09Er9VaIefr2LMAf3OEmpCkjOi34eYyQYAXUTjEQtZJTKcF0E2UKTh+osDLsgNim9Q==
 
-xmlbuilder@>=11.0.1:
+xmlbuilder@>=11.0.1, xmlbuilder@^15.1.1:
   version "15.1.1"
   resolved "https://registry.yarnpkg.com/xmlbuilder/-/xmlbuilder-15.1.1.tgz#9dcdce49eea66d8d10b42cae94a79c3c8d0c2ec5"
   integrity sha512-yMqGBqtXyeN1e3TGYvgNgDVZ3j84W4cwkOXQswghol6APgZWaff9lnbvN7MHYJOiXsvGPXtjTYJEiC9J2wv9Eg==
@@ -5212,6 +5333,11 @@ yargs-parser@^20.0.0, yargs-parser@^20.2.2:
   version "20.2.9"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-20.2.9.tgz#2eb7dc3b0289718fc295f362753845c41a0c94ee"
   integrity sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==
+
+yargs-parser@^21.1.1:
+  version "21.1.1"
+  resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
+  integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==
 
 yargs@^15.0.1:
   version "15.4.1"
